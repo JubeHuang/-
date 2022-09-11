@@ -39,7 +39,7 @@ class ViewController: UIViewController {
         if totalMoney != nil, tipNum != nil{
             let tip = Double(tipNum! / 100 + 1)
             let averagePrice = totalMoney! * tip / people
-            averagePriceLabel.text = String(averagePrice)
+            averagePriceLabel.text = String(format: "%.1f", averagePrice)
         } else if totalMoney != nil, tipNum == nil {
             let averagePrice = totalMoney! / people
             averagePriceLabel.text = String(format: "%.1f", averagePrice)
